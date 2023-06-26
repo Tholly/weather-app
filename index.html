@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="border">
+      <div class="container">
+        <form id="search-form">
+          <input type="text" id="town" placeholder="Search for a city" />
+          <input type="submit" id="search" value="Search" />
+        <button id ="location"> Current </button>
+        </form>
+        <section>
+          <div id="city">MBABANE</div>
+
+          <div id="temperature"> 20 </div>
+          <button id="celsius"> &#8451 </button>|
+          <button id ="fahrenheit"> F </button>
+          <br />
+          <div id="currentdate">
+            Saturday
+          </div>
+          <div id='humidity'>
+          Humidity : 20 <br />
+          &#9748;
+          </div>
+          <hr />
+        </section>
+        <section>
+          <div class="days">
+            <div class="row">
+              <div class="col">Sat</div>
+              <div class="col">Sun</div>
+              <div class="col">Mon</div>
+              <div class="col">Tue</div>
+              <div class="col">Wed</div>
+              <div class="col">Thu</div>
+              <div class="col">Fri</div>
+            </div>
+            <section class="emojis">
+              <div class="row">
+                <div class="col">&#9925;</div>
+                <div class="col">&#9926;</div>
+                <div class="col">☁</div>
+                <div class="col">&#127781;</div>
+                <div class="col">&#127780;</div>
+                <div class="col">&#127779;</div>
+                <div class="col">&#127779;</div>
+              </div>
+            </section>
+            <div class="maxtemperatures">
+              <div class="row">
+                <div class="col">23</div>
+                <div class="col">23</div>
+                <div class="col">20</div>
+                <div class="col">26</div>
+                <div class="col">28</div>
+                <div class="col">30</div>
+                <div class="col">32</div>
+              </div>
+            </div>
+            <div class="mintemperatures">
+              <div class="row">
+                <div class="col">8</div>
+                <div class="col">5</div>
+                <div class="col">7</div>
+                <div class="col">8</div>
+                <div class="col">9</div>
+                <div class="col">9</div>
+                <div class="col">7</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

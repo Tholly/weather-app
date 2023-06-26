@@ -1,0 +1,28 @@
+body {
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+}
+.border {
+  padding: 50px;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  background-color: rgb(203, 175, 230);
+}
+button {
+  border-radius: 20px;
+  font-size: medium;
+}
+button:hover {
+  background-color: white;
+}
+.days {
+  font-weight: bold;
+}
+#celsius,
+#fahrenheit {
+  background: none;
+  border: none;
+  color: cadetblue;
+}
