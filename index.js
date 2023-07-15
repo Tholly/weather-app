@@ -55,7 +55,7 @@ function displayFahreinheit(event) {
   temperature.innerHTML = fareinheit;
 }
 
-let fahreinheiLink = document.querySelector("#fahreinheit");
+let fahreinheiLink = document.querySelector("#fahrenheit");
 fahreinheiLink.addEventListener("click", displayFahreinheit);
 
 function displayCelsius(event) {
