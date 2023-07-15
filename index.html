@@ -20,22 +20,22 @@
         <form id="search-form">
           <input type="text" id="town" placeholder="Search for a city" />
           <input type="submit" id="search" value="Search" />
-        <button id ="location"> Current </button>
         </form>
         <section>
-          <div id="city">MBABANE</div>
+          <div id="city"></div>
 
-          <div id="temperature"> 20 </div>
-          <button id="celsius"> &#8451 </button>|
-          <button id ="fahrenheit"> F </button>
+          <div id="temperature"></div>
+          <div class="units">
+            <a href="#" id="celsius"> C </a>|
+            <a href="#" id="fahrenheit"> F </a>
+          </div>
+
           <br />
-          <div id="currentdate">
-            Saturday
-          </div>
-          <div id='humidity'>
-          Humidity : 20 <br />
-          &#9748;
-          </div>
+          <div id="currentdate">Saturday</div>
+          <div id="humidity">Humidity : 20 <br /></div>
+          <img src=".." id="icon" width="40px" />
+          <div id="description">clear</div>
+
           <hr />
         </section>
         <section>
