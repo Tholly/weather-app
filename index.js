@@ -15,6 +15,13 @@ let dayTime = document.querySelector("#currentdate");
 let currentday = `${days[day]} ${hour}:${minutes}`;
 dayTime.innerHTML = currentday;
 let celseuisTemperature = null;
+
+function getForecast(coordinates) {
+  let ApiKey = "2513f3c728b1b5ff4f4347e1a6af22b8";
+  let ApiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${ApiKey}`;
+  axios.get(ApiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   celseuisTemperature = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#temperature");
@@ -32,25 +39,24 @@ function showTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${icon}@2x.png`
   );
+  getForecast(response.data.coord);
 }
 
-function displayForecast(day) {
+function displayForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Tue", "Thu", "Fri", "Sat", "Sun", "Mon"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `
-    <div class="row">
-      <div class="col-2">
+      `<div class="col-2">
       <div class="weather-forecast-date">${day} </div>
     <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width="42">
     <div class="weather-forecast-temperatures">
       <span class="weather-forecast-tempeature-max> 18 </span>
       <span class="weather-forecast-tempeature-min> 18 </span>
-      </div>
-      </div>
+    </div>
     </div>`;
   });
   forecastHTML = forecastHTML + `</div>`;
